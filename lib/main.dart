@@ -1,6 +1,5 @@
-import 'package:english_words/english_words.dart' as prefix0;
-import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
@@ -38,7 +37,6 @@ class RandomWordsState extends State<RandomWords> {
     );
   }
 
-  @override
   Widget _buildRow(WordPair pair){
     return ListTile(
       title: Text(
@@ -48,7 +46,6 @@ class RandomWordsState extends State<RandomWords> {
     );
   }
 
-  @override
   Widget _buildSuggestions(){
     return ListView.builder(
       padding: const EdgeInsets.all(16.0),
