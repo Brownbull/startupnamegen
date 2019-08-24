@@ -9,17 +9,18 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context){
     // final wordPair = WordPair.random();  
     return MaterialApp(
-      title: 'Welcome to Flutter Mobile Dev',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome 2 Flutter'),
-        ),
-        body: Center(
-          // child: Text('Hello Mobile World'),
-          // child: Text(wordPair.asPascalCase),
-          child: RandomWords(),
-        )
-      )
+      title: 'Startup Name Gen',
+      home: RandomWords(),
+      // home: Scaffold(
+      //   appBar: AppBar(
+      //     title: Text('Welcome 2 Flutter'),
+      //   ),
+      //   body: Center(
+      //     // child: Text('Hello Mobile World'),
+      //     // child: Text(wordPair.asPascalCase),
+      //     child: RandomWords(),
+      //   )
+      // )
     );
   }
 }
@@ -29,8 +30,12 @@ class RandomWordsState extends State<RandomWords> {
   final _biggerFont = const TextStyle(fontSize: 18.0);
   @override
   Widget build(BuildContext context){
-    final wordPair = WordPair.random();
-    return Text(wordPair.asPascalCase);
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Startup Name Generator'),
+      ),
+      body: _buildSuggestions(),
+    );
   }
 
   @override
